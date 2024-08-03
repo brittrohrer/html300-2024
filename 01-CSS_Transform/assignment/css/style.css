@@ -2,7 +2,8 @@ html {
   box-sizing: border-box;
 }
 
-main {
+main,
+body {
   margin: 0;
   padding: 0;
   width: 100%;
@@ -25,24 +26,24 @@ main {
   cursor: pointer;
   position: relative;
   z-index: 0;
-  border-radius: 10px;
+  border-radius: 50px;
 }
 
 .glow-on-hover:before {
   content: "";
   position: absolute;
   z-index: -1;
-  border-radius: 10px;
-  background: linear-gradient(45deg, #189ad3, #005073, #1ebbd7, #005073, #71c7ec, #005073, #107dac);
+  border-radius: 50px;
+  background: conic-gradient(black, #71c7ec);
   top: -2px;
   left: -2px;
   width: calc(100% + 4px);
   height: calc(100% + 4px);
   background-size: 400%;
   filter: blur(2px);
-  animation: glowing 20s ease infinite;
+  animation: glowing 10s ease-in-out infinite;
   opacity: 0;
-  transition: opacity 0.5s ease-in;
+  transition: opacity 0.5s ease;
 }
 
 .glow-on-hover:hover:before {
@@ -53,7 +54,7 @@ main {
   content: "";
   position: absolute;
   z-index: -1;
-  border-radius: 10px;
+  border-radius: 50px;
   background: #111;
   top: 0;
   left: 0;
@@ -71,4 +72,7 @@ main {
   100% {
     background-position: 0 0;
   }
+}
+.glow-on-hover:active {
+  transform: scale(2);
 }/*# sourceMappingURL=style.css.map */

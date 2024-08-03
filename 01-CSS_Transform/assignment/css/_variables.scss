@@ -1,28 +1,24 @@
 //colors
 $color1: black;
 $color2: white;
-$color3: #005073;
-$color4: #107dac;
-$color5: #189ad3;
-$color6: #1ebbd7;
-$color7: #71c7ec;
+$color3: #71c7ec;
 $color8: #111;
 
 
 //mixins
-
+//mixin for flex display incase used again
 @mixin flex {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
 }
-
+//mixin for the button to use in before and after but include inputs for the change that occurs durking the hover
 @mixin glow($background, $top, $left, $width, $height) {
     content: '';
     position: absolute;
     z-index: -1;
-    border-radius: 10px;
+    border-radius: 50px;
     background: $background;
     top: $top;
     left: $left;
