@@ -1,3 +1,19 @@
+html {
+  box-sizing: border-box;
+}
+
+main {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: black;
+}
+
 .glow-on-hover {
   width: 220px;
   height: 50px;
@@ -26,14 +42,6 @@
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
   border-radius: 10px;
-}
-
-.glow-on-hover:active {
-  color: #000;
-}
-
-.glow-on-hover:active:after {
-  background: transparent;
 }
 
 .glow-on-hover:hover:before {

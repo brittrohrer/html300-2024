@@ -1,5 +1,4 @@
-//https://dev.to/webdeasy/top-20-css-buttons-animations-f41
-
+//https://dev.to/webdeasy/top-20-css-buttons-animations-f41//
 .glow-on-hover {
     width: 220px;
     height: 50px;
@@ -29,13 +28,6 @@
     border-radius: 10px;
 }
 
-.glow-on-hover:active {
-    color: #000
-}
-
-.glow-on-hover:active:after {
-    background: transparent;
-}
 .glow-on-hover:hover:before {
     opacity: 1;
 }
