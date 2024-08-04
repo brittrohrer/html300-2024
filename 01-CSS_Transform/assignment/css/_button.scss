@@ -1,7 +1,7 @@
-//source code
-//https://dev.to/webdeasy/top-20-css-buttons-animations-f41//
+/*source code
+https://dev.to/webdeasy/top-20-css-buttons-animations-f41// */
 
-//Initial Button style(font color, size, button color, shape, etc)
+/*Initial Button style(font color, size, button color, shape, etc)*/
 .glow-on-hover {
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     width: 220px;
@@ -15,7 +15,7 @@
     z-index: 0;
     border-radius: 50px;
 }
-//Create button hover effect but keep hidden until hovered over
+/*Create button hover effect but keep hidden until hovered over*/
 .glow-on-hover:before {
     @include glow(conic-gradient($color1, $color3), -2px, -2px, calc(100% + 4px), calc(100% + 4px));
 
@@ -25,16 +25,16 @@
     opacity: 0;
     transition: opacity .5s ease;
 }
-//Make the button hover effect visible while hovering
+/*Make the button hover effect visible while hovering*/
 .glow-on-hover:hover:before {
     opacity: 1;
 }
-//How the button appears after the hover state, returning to dark color and no glow effect
+/*How the button appears after the hover state, returning to dark color and no glow effect*/
 .glow-on-hover:after {
     @include glow($color8, 0, 0, 100%, 100%);
 
 }
-//Glowing animation changing the position of the color at different stages of the animation to give moving color glow effect
+/*Glowing animation changing the position of the color at different stages of the animation to give moving color glow effect*/
 @keyframes glowing {
     0% { 
         background-position: 0 0;
@@ -46,7 +46,7 @@
         background-position: 0 0; 
     }
 }
-//When clicking the button make the button twice the size
+/*When clicking the button make the button twice the size*/
 .glow-on-hover:active {
     transform: scale(2);
 }
