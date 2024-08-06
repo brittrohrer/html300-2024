@@ -7,7 +7,55 @@ html {
 *:before {
     box-sizing: inherit;
 }
+body {
+    display: grid;
+    grid-template-areas: "header header header header header header"
+                        "nav nav nav nav nav nav"
+                        "sidebar sidebar main main main main"
+                        "footer footer footer footer footer footer";
+    grid-template-rows: 1fr .5fr 5fr 1fr;
+    height: 100vh;
+    font-size: 20px;             
+}
+header {
+    @include grid(header, $red);
+    @include flex();
+}
 
-.main {
-    padding: 2rem;
+nav {
+    @include grid(nav, $green);
+    @include flex();
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+
+        li {
+            display: inline;
+            padding-left: 1em;
+            padding-right: 1rem;
+        }
+    }
+}
+
+aside {
+    @include grid(sidebar, $purple);
+    @include flex();
+}
+
+main {
+    @include grid(main, $orange);
+    @include flex();
+}
+
+footer {
+    @include grid(footer, $blue);
+    @include flex();
+}
+
+.container {
+    @include flex();
 }

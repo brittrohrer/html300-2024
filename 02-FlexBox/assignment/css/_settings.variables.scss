@@ -6,3 +6,16 @@ $orange: #f86c01;
 $blue: #0b0bd6;
 $white: white;
 
+/* Mixins */
+@mixin grid($area, $backColor) {
+    grid-area: $area;
+    background-color: $backColor;
+    color: $white;
+    
+}
+@mixin flex() {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
