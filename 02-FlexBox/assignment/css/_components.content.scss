@@ -7,6 +7,7 @@ html {
 *:before {
     box-sizing: inherit;
 }
+
 body {
     display: grid;
     grid-template-areas: "header header header header header header"
@@ -17,23 +18,24 @@ body {
     height: 100vh;
     font-size: 20px;             
 }
-header {
-    @include grid(header, $red);
+
+.header {
+    @include grid(header, $color1);
     @include flex();
 }
 
-nav {
-    @include grid(nav, $green);
+.navbar {
+    @include grid(nav, $color2);
     @include flex();
 
-    ul {
+    & .navbar__list {
         list-style-type: none;
         padding: 0;
         width: 100%;
         display: flex;
         justify-content: space-evenly;
 
-        li {
+        & .navbar_item {
             display: inline;
             padding-left: 1em;
             padding-right: 1rem;
@@ -41,18 +43,18 @@ nav {
     }
 }
 
-aside {
-    @include grid(sidebar, $purple);
+.aside {
+    @include grid(sidebar, $color3);
     @include flex();
 }
 
-main {
-    @include grid(main, $orange);
+.main {
+    @include grid(main, $color4);
     @include flex();
 }
 
-footer {
-    @include grid(footer, $blue);
+.footer {
+    @include grid(footer, $color5);
     @include flex();
 }
 
