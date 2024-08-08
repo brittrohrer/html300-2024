@@ -1,7 +1,13 @@
+/* Header
+- apply flex display and red background to the header */
 .header {
     @include grid(header, $red);
     @include flex();
 }
+
+/* Navbar
+- apply flex display and green background to the navbar
+- make list flex in the navbar and get rid of bullets */
 
 .navbar {
     @include grid(nav, $green);
@@ -22,21 +28,28 @@
     }
 }
 
+/* Aside
+- apply flex display and purple background to the sidebar */
 .aside {
     @include grid(sidebar, $purple);
     @include flex();
 }
-
+/* Main
+- apply flex display and orange background to the main content */
 .main {
     @include grid(main, $orange);
     @include flex();
 }
 
+/* Footer
+- apply flex display and blue background to the footer */
 .footer {
     @include grid(footer, $blue);
     @include flex();
 }
 
+/* Content Containers
+- content container for each area/section */
 .container {
     @include flex();
 }

@@ -379,6 +379,11 @@ th {
 
 /* Colors */
 /* Mixins   */
+/* apply the input grid area and background color for each element of the page */
+/* apply a flex display to each grid area
+-did not combine with grid mixin so it could be used at other times */
+/* Broad Structure
+- applied to the main structure and/or every element within the webpage */
 html {
   box-sizing: border-box;
 }
@@ -389,6 +394,7 @@ html {
   box-sizing: inherit;
 }
 
+/* grid structure for entire page */
 body {
   display: grid;
   grid-template-areas: "header header header header header header" "nav nav nav nav nav nav" "sidebar sidebar main main main main" "footer footer footer footer footer footer";
@@ -397,6 +403,8 @@ body {
   font-size: 20px;
 }
 
+/* Header
+- apply flex display and red background to the header */
 .header {
   grid-area: header;
   background-color: #f13333;
@@ -407,6 +415,9 @@ body {
   align-items: center;
 }
 
+/* Navbar
+- apply flex display and green background to the navbar
+- make list flex in the navbar and get rid of bullets */
 .navbar {
   grid-area: nav;
   background-color: #0cd10c;
@@ -429,6 +440,8 @@ body {
   padding-right: 1rem;
 }
 
+/* Aside
+- apply flex display and purple background to the sidebar */
 .aside {
   grid-area: sidebar;
   background-color: #6f419d;
@@ -439,6 +452,8 @@ body {
   align-items: center;
 }
 
+/* Main
+- apply flex display and orange background to the main content */
 .main {
   grid-area: main;
   background-color: #f86c01;
@@ -449,6 +464,8 @@ body {
   align-items: center;
 }
 
+/* Footer
+- apply flex display and blue background to the footer */
 .footer {
   grid-area: footer;
   background-color: #0b0bd6;
@@ -459,6 +476,8 @@ body {
   align-items: center;
 }
 
+/* Content Containers
+- content container for each area/section */
 .container {
   display: flex;
   justify-content: center;

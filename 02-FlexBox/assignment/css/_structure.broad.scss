@@ -1,3 +1,5 @@
+/* Broad Structure
+- applied to the main structure and/or every element within the webpage */
 html {
     box-sizing: border-box;
 }
@@ -7,7 +9,7 @@ html {
 *:before {
     box-sizing: inherit;
 }
-
+/* grid structure for entire page */
 body {
     display: grid;
     grid-template-areas: "header header header header header header"

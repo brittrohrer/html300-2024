@@ -7,12 +7,15 @@ $blue: #0b0bd6;
 $white: white;
 
 /* Mixins   */
+/* apply the input grid area and background color for each element of the page */
 @mixin grid($area, $backColor) {
     grid-area: $area;
     background-color: $backColor;
     color: $white;
 }
 
+/* apply a flex display to each grid area
+-did not combine with grid mixin so it could be used at other times */
 @mixin flex() {
     display: flex;
     justify-content: center;
