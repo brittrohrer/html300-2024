@@ -13,12 +13,12 @@
         width: 100%;
         display: flex;
         justify-content: space-evenly;
+    }
 
     &__item {
         display: inline;
         padding-left: 1em;
-        padding-right: 1rem;
-    }     
+        padding-right: 1rem;   
     }
 }
 

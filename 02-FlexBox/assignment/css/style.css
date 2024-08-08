@@ -423,7 +423,7 @@ body {
   display: flex;
   justify-content: space-evenly;
 }
-.navbar__list__item {
+.navbar__item {
   display: inline;
   padding-left: 1em;
   padding-right: 1rem;
