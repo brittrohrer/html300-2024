@@ -1,39 +1,39 @@
 .header {
-    @include grid(header, $color1);
+    @include grid(header, $red);
     @include flex();
 }
 
 .navbar {
-    @include grid(nav, $color2);
+    @include grid(nav, $green);
     @include flex();
 
-    & .navbar__list {
+    &__list {
         list-style-type: none;
         padding: 0;
         width: 100%;
         display: flex;
         justify-content: space-evenly;
 
-        & .navbar__item {
-            display: inline;
-            padding-left: 1em;
-            padding-right: 1rem;
-        }
+    &__item {
+        display: inline;
+        padding-left: 1em;
+        padding-right: 1rem;
+    }     
     }
 }
 
 .aside {
-    @include grid(sidebar, $color3);
+    @include grid(sidebar, $purple);
     @include flex();
 }
 
 .main {
-    @include grid(main, $color4);
+    @include grid(main, $orange);
     @include flex();
 }
 
 .footer {
-    @include grid(footer, $color5);
+    @include grid(footer, $blue);
     @include flex();
 }
 
