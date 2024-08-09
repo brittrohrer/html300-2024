@@ -10,13 +10,14 @@ html {
     box-sizing: inherit;
 }
 /* grid structure for entire page */
-body {
+.grid {
     display: grid;
-    grid-template-areas: "header header header header header header"
-                        "nav nav nav nav nav nav"
-                        "sidebar sidebar main main main main"
-                        "footer footer footer footer footer footer";
+    grid-template-areas: "header header header"
+                        "nav nav nav "
+                        "sidebar main main"
+                        "footer footer footer";
     grid-template-rows: 1fr .5fr 5fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     height: 100vh;
     font-size: 20px;             
 }

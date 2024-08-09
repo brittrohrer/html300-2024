@@ -395,10 +395,11 @@ html {
 }
 
 /* grid structure for entire page */
-body {
+.grid {
   display: grid;
-  grid-template-areas: "header header header header header header" "nav nav nav nav nav nav" "sidebar sidebar main main main main" "footer footer footer footer footer footer";
+  grid-template-areas: "header header header" "nav nav nav " "sidebar main main" "footer footer footer";
   grid-template-rows: 1fr 0.5fr 5fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   height: 100vh;
   font-size: 20px;
 }
@@ -483,4 +484,18 @@ body {
   justify-content: center;
   text-align: center;
   align-items: center;
+}
+
+/* Responsive grid layout
+- When screen is less than 900px wide and in portrait view, the grid changes to a single column along with the 
+nav bar so there is no horizontal scrolling */
+@media only screen and (max-width: 900px) and (orientation: portrait) {
+  .grid {
+    grid-template-areas: "header" "nav" "main" "sidebar" "footer";
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+  }
+  .navbar__list {
+    flex-direction: column;
+  }
 }/*# sourceMappingURL=style.css.map */
