@@ -1,7 +1,8 @@
 // Import partials here
 @import 'base.normalize';
-@import 'settings.variables';
-@import 'structure.broad';
-@import 'structure.content';
-@import 'settings.responsive';
+@import 'core.variables';
+@import 'core.mixins';
+@import 'layout.grid';
+@import 'layout.body';
+@import 'layout.responsive';
 
