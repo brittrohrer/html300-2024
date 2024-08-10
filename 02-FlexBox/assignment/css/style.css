@@ -382,6 +382,18 @@ th {
 /* apply the input grid area and background color for each element of the page */
 /* apply a flex display to each grid area
 -did not combine with grid mixin so it could be used at other times */
+/* HTML 
+- applied to the main structure and/or every element within the webpage */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: inherit;
+}
+
 /* Broad Structure
 - applied to the main structure and/or every element within the webpage */
 html {
