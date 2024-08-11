@@ -8,7 +8,8 @@
 
 /* Navbar
 - apply flex display and green background to the navbar
-- make list flex in the navbar and get rid of bullets */
+- make list flex in the navbar and get rid of bullets 
+- style links to get rid of underline and blue link color*/
 
 .navbar {
     @include grid(nav, $green);
@@ -28,6 +29,10 @@
         display: inline;
         padding-left: 1em;
         padding-right: 1rem;   
+    }
+    &__link {
+        text-decoration: none;
+        color: $white;
     }
 }
 

@@ -394,6 +394,19 @@ html {
   box-sizing: inherit;
 }
 
+/* Text*/
+h1 {
+  font-size: 20px;
+}
+
+h2 {
+  font-size: 18px;
+}
+
+p {
+  font-size: 15px;
+}
+
 /* Broad Structure
 - applied to the main structure and/or every element within the webpage */
 html {
@@ -431,7 +444,8 @@ html {
 
 /* Navbar
 - apply flex display and green background to the navbar
-- make list flex in the navbar and get rid of bullets */
+- make list flex in the navbar and get rid of bullets 
+- style links to get rid of underline and blue link color*/
 .navbar {
   grid-area: nav;
   background-color: #0cd10c;
@@ -454,6 +468,10 @@ html {
   display: inline;
   padding-left: 1em;
   padding-right: 1rem;
+}
+.navbar__link {
+  text-decoration: none;
+  color: white;
 }
 
 /* Aside
@@ -515,8 +533,5 @@ nav bar so there is no horizontal scrolling */
     grid-template-areas: "header" "nav" "main" "sidebar" "footer";
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
     grid-template-columns: 1fr;
-  }
-  .navbar__list {
-    flex-direction: column;
   }
 }/*# sourceMappingURL=style.css.map */
