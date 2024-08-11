@@ -396,27 +396,15 @@ html {
 
 /* Text*/
 h1 {
-  font-size: 20px;
+  font-size: 2em;
 }
 
 h2 {
-  font-size: 18px;
+  font-size: 1.5em;
 }
 
 p {
-  font-size: 15px;
-}
-
-/* Broad Structure
-- applied to the main structure and/or every element within the webpage */
-html {
-  box-sizing: border-box;
-}
-
-*,
-*:after,
-*:before {
-  box-sizing: inherit;
+  font-size: 1em;
 }
 
 /* grid structure for entire page */
@@ -426,7 +414,6 @@ html {
   grid-template-rows: 1fr 0.5fr 5fr 1fr;
   grid-template-columns: 1fr 1fr 1fr;
   height: 100vh;
-  font-size: 20px;
 }
 
 /* Header
