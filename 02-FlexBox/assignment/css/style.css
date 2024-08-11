@@ -438,7 +438,7 @@ p {
   background-color: #0cd10c;
   color: white;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   text-align: center;
   align-items: center;
   justify-content: center;
@@ -507,9 +507,8 @@ p {
 .container {
   display: flex;
   flex-direction: column;
-  text-align: center;
-  align-items: center;
   text-align: left;
+  align-items: center;
 }
 
 /* Responsive grid layout

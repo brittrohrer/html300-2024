@@ -2,7 +2,8 @@
 - apply flex display and red background to the header */
 .header {
     @include grid(header, $red);
-    @include flex();
+
+    @include flex(column, center);
     justify-content: center;
 }
 
@@ -13,7 +14,8 @@
 
 .navbar {
     @include grid(nav, $green);
-    @include flex();
+
+    @include flex(row, center);
     justify-content: center;
 
     &__list {
@@ -40,7 +42,9 @@
 - apply flex display and purple background to the sidebar */
 .aside {
     @include grid(sidebar, $purple);
-    @include flex();
+
+    @include flex(column, center);
+
     padding-left: 1em;
     padding-right: 1em;
 }
@@ -48,7 +52,9 @@
 - apply flex display and orange background to the main content */
 .main {
     @include grid(main, $orange);
-    @include flex();
+
+    @include flex(column, center);
+    
     padding-left: 1em;
     padding-right: 1em;
 }
@@ -57,13 +63,13 @@
 - apply flex display and blue background to the footer */
 .footer {
     @include grid(footer, $blue);
-    @include flex();
+
+    @include flex(column, center);
     justify-content: center;
 }
 
 /* Content Containers
 - content container for each area/section */
 .container {
-    @include flex();
-    text-align: left;
+    @include flex(column, left);
 }

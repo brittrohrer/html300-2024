@@ -8,9 +8,10 @@
 
 /* apply a flex display to each grid area
 -did not combine with grid mixin so it could be used at other times */
-@mixin flex() {
+@mixin flex($dir, $text-align) {
     display: flex;
-    flex-direction: column;
-    text-align: center;
+    flex-direction: $dir;
+    text-align: $text-align;
     align-items: center;
 }
+
