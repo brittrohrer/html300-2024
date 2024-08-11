@@ -423,9 +423,10 @@ html {
   background-color: #f13333;
   color: white;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   text-align: center;
   align-items: center;
+  justify-content: center;
 }
 
 /* Navbar
@@ -436,12 +437,14 @@ html {
   background-color: #0cd10c;
   color: white;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   text-align: center;
   align-items: center;
+  justify-content: center;
 }
 .navbar__list {
   list-style-type: none;
+  margin: 0.5em;
   padding: 0;
   width: 100%;
   display: flex;
@@ -460,9 +463,11 @@ html {
   background-color: #6f419d;
   color: white;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   text-align: center;
   align-items: center;
+  padding-left: 1em;
+  padding-right: 1em;
 }
 
 /* Main
@@ -472,9 +477,11 @@ html {
   background-color: #f86c01;
   color: white;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   text-align: center;
   align-items: center;
+  padding-left: 1em;
+  padding-right: 1em;
 }
 
 /* Footer
@@ -484,18 +491,20 @@ html {
   background-color: #0b0bd6;
   color: white;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   text-align: center;
   align-items: center;
+  justify-content: center;
 }
 
 /* Content Containers
 - content container for each area/section */
 .container {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   text-align: center;
   align-items: center;
+  text-align: left;
 }
 
 /* Responsive grid layout
