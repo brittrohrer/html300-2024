@@ -1,0 +1,11 @@
+/* grid structure for entire page */
+.grid {
+    display: grid;
+    grid-template-areas: "header header header"
+                        "nav nav nav "
+                        "sidebar main main"
+                        "footer footer footer";
+    grid-template-rows: 1fr .5fr 5fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: 100vh;           
+}

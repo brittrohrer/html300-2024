@@ -1,0 +1,14 @@
+/* Responsive grid layout
+- When screen is less than 900px wide and in portrait view, the grid changes to a single column along with the 
+nav bar so there is no horizontal scrolling */
+@media only screen and (max-width: 900px) and (orientation: portrait) {
+    .grid {
+        grid-template-areas: "header"
+                            "nav"
+                            "main"
+                            "sidebar"
+                            "footer";
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
+    }
+}

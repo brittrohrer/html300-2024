@@ -1,0 +1,75 @@
+/* Header
+- apply flex display and red background to the header */
+.header {
+    @include grid(header, $red);
+
+    @include flex(column, center);
+    justify-content: center;
+}
+
+/* Navbar
+- apply flex display and green background to the navbar
+- make list flex in the navbar and get rid of bullets 
+- style links to get rid of underline and blue link color*/
+
+.navbar {
+    @include grid(nav, $green);
+
+    @include flex(row, center);
+    justify-content: center;
+
+    &__list {
+        list-style-type: none;
+        margin: .5em;
+        padding: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    &__item {
+        display: inline;
+        padding-left: 1em;
+        padding-right: 1rem;   
+    }
+    &__link {
+        text-decoration: none;
+        color: $white;
+    }
+}
+
+/* Aside
+- apply flex display and purple background to the sidebar */
+.aside {
+    @include grid(sidebar, $purple);
+
+    @include flex(column, center);
+
+    padding-left: 1em;
+    padding-right: 1em;
+}
+/* Main
+- apply flex display and orange background to the main content */
+.main {
+    @include grid(main, $orange);
+
+    @include flex(column, center);
+    
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+/* Footer
+- apply flex display and blue background to the footer */
+.footer {
+    @include grid(footer, $blue);
+
+    @include flex(column, center);
+    justify-content: center;
+}
+
+/* Content Containers
+- content container for each area/section */
+.container {
+    @include flex(column, left);
+}

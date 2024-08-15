@@ -1,6 +1,9 @@
 // Import partials here
 @import 'base.normalize';
-@import 'settings.variables';
-@import 'settings.responsive';
-@import 'components.content';
+@import 'core.variables';
+@import 'core.mixins';
+@import 'layout.all';
+@import 'layout.grid';
+@import 'layout.body';
+@import 'layout.responsive';
 

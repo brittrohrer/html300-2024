@@ -1,0 +1,17 @@
+/* Mixins   */
+/* apply the input grid area and background color for each element of the page */
+@mixin grid($area, $backColor) {
+    grid-area: $area;
+    background-color: $backColor;
+    color: $white;
+}
+
+/* apply a flex display to each grid area
+-did not combine with grid mixin so it could be used at other times */
+@mixin flex($dir, $text-align) {
+    display: flex;
+    flex-direction: $dir;
+    text-align: $text-align;
+    align-items: center;
+}
+
