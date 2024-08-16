@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <title>Assignment 06 - Bootstrap 4 - grid</title>
+    </head>
+    <body>
+        <header class="bg-light">
+            <h1>Website Name</h1>
+        </header>
+
+        <!-- Create navbar with nav item and nav link
+             Make navbar vertical on a small screen
+             Make navbar dark with light colored text-->
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark"> 
+            <ul class="nav navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home/Landing Page</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Images Page</a></li>
+                <li class="nav-item"><a class="nav-link" href="accordian-page.html">Accordian Page</a></li>
+                <li class="nav-item"><a class="nav-link" href="grid-page.html">Grid Page</a></li>
+            </ul>
+        </nav>
+        <main class="main container">
+            <div class="row bg-primary">
+                <h2>First Container Title</h2>
+                <div class="col-md-3">
+                    <h3 class="text-center">col 1</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt accusamus numquam tenetur 
+                        fugiat minus asperiores inventore, nulla harum odio ducimus.</p>
+                </div>
+                <div class="col-md-3">
+                    <h3 class="text-center">col 2</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt magnam in ducimus cum veritatis 
+                        quae est, dolore minima repellendus harum veniam deserunt similique aliquam, ullam, expedita quia unde! 
+                        Incidunt autem hic, ex ipsa veniam nulla molestiae atque aperiam dolorem vel?</p>
+                </div>
+                <div class="col-md-3">
+                    <h3 class="text-center">col 3</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt accusamus numquam tenetur 
+                        fugiat minus asperiores inventore, nulla harum odio ducimus.</p>
+                </div>
+                <div class="col-md-3">
+                    <h3 class="text-center">col 4</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt magnam in ducimus cum veritatis 
+                        quae est, dolore minima repellendus harum veniam deserunt similique aliquam, ullam, expedita quia unde! 
+                        Incidunt autem hic, ex ipsa veniam nulla molestiae atque aperiam dolorem vel?</p>
+                </div>
+            </div>
+
+            <div class="row bg-info">
+                <h2>Second Container Title</h2>
+                <div class="col-lg-6">
+                    <h3>col 1</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti incidunt vitae modi 
+                        suscipit laboriosam, mollitia eum libero quidem. Amet, eligendi?</p>
+                </div>
+                <div class="col-lg-3 text-center">
+                    <h3>col 2</h3>
+                    <p>Lorem ipsum dolor sit</p>
+                    <p>Lorem ipsum dolor sit</p>
+                    <p>Lorem ipsum dolor sit</p>
+                </div>
+                <div class="col-lg-3 text-center">
+                    <h3>col 3</h3>
+                    <p>Lorem ipsum dolor sit</p>
+                    <p>Lorem ipsum dolor sit</p>
+                    <p>Lorem ipsum dolor sit</p>
+                </div>
+            </div>
+            <div class="row bg-warning">
+                <h2>Third Container Title</h2>
+                <div class="col-sm-6">
+                    <h3>col 1</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti incidunt vitae modi 
+                        suscipit laboriosam, mollitia eum libero quidem. Amet, eligendi?</p>
+                </div>
+                <div class="col-sm-6">
+                    <h3>col 2</h3>
+                    <p>Lorem ipsum dolor sit</p>
+                    <p>Lorem ipsum dolor sit</p>
+                    <p>Lorem ipsum dolor sit</p>
+                </div>
+            </div>  
+
+        </main>
+        <footer class="bg-light">
+            <h4 class="text-center fixed-bottom">Footer Info</h4>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    </body>
+</html>
