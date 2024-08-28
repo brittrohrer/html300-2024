@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <title>Assignment 06 - Bootstrap 4 - Accordian</title>
+    </head>
+    <!--make the entire body element a flex container with a column direction
+    make the body height 100 percent of the veiwport height so the footer will be at the bottom of page-->
+    <body class="d-flex flex-column min-vh-100">
+        <header>
+            <h1>Website Name</h1>
+        </header>
+
+        <!-- Create navbar with nav item and nav link
+             Make navbar vertical on a small screen
+             Make navbar dark with light colored text-->
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark"> 
+            <ul class="nav navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home/Landing Page</a></li>
+                <li class="nav-item"><a class="nav-link" href="images-page.html">Images Page</a></li>
+                <li class="nav-item"><a class="nav-link" href="accordion-page.html">Accordion Page</a></li>
+                <li class="nav-item"><a class="nav-link" href="grid-page.html">Grid Page</a></li>
+            </ul>
+        </nav>
+        <main class="main">
+            <!--create accordian parent with id to reference in each child-->
+            <div class="accordion" id="myFirstAccordion">
+                <!--create first accordian collapse-->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <!--create button to make the accordian content visible
+                    expanded false so it is not automatically expanded-->
+                    <button class="accordion-button collapsed" 
+                            type="button" 
+                            data-bs-toggle="collapse" 
+                            data-bs-target="#collapseOne" 
+                            aria-expanded="false" 
+                            aria-controls="collapseOne">
+                      Accordion #1
+                    </button>
+                  </h2>
+                  <!--the content that will be visible when button above if clicked -->
+                  <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#myFirstAccordion">
+                    <div class="accordion-body">
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam voluptatem provident tempore ducimus 
+                      quidem facere magnam similique quaerat nihil molestias?
+                    </div>
+                  </div>
+                </div>
+                <!--create second accordian collapse-->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <!--create button to make the accordian content visible
+                    expanded false so it is not automatically expanded-->
+                    <button class="accordion-button collapsed" 
+                            type="button" 
+                            data-bs-toggle="collapse" 
+                            data-bs-target="#collapseTwo" 
+                            aria-expanded="false" 
+                            aria-controls="collapseTwo">
+                      Accordion #2
+                    </button>
+                  </h2>
+                  <!--the content that will be visible when button above if clicked -->
+                  <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#myFirstAccordion">
+                    <div class="accordion-body">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, quae quis culpa itaque ipsa debitis, 
+                      rerum expedita eaque quas, voluptatem velit quibusdam! Maxime, id libero? Repudiandae minus sequi optio consectetur!
+                    </div>
+                  </div>
+                </div>
+                <!--create third accordian collapse-->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <!--create button to make the accordian content visible
+                    expanded false so it is not automatically expanded-->
+                    <button class="accordion-button collapsed" 
+                            type="button" 
+                            data-bs-toggle="collapse" 
+                            data-bs-target="#collapseThree" 
+                            aria-expanded="false" 
+                            aria-controls="collapseThree">
+                      Accordion #3
+                    </button>
+                  </h2>
+                  <!--the content that will be visible when button above if clicked -->
+                  <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#myFirstAccordion">
+                    <div class="accordion-body">
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni, minima aspernatur! Tenetur sapiente eos 
+                      incidunt, vel debitis eligendi quam dolor dicta aliquid a ut similique odio esse culpa! Nisi consequuntur 
+                      nihil distinctio fugit, expedita consequatur! Hic asperiores dolor porro quis!
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </main>
+        <!--make a footer with the title centered-->
+        <footer class="footer bg-light mt-auto">
+            <h4 class="text-center">Footer Info</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, incidunt maiores eos quis quo cupiditate 
+                et odit laudantium a impedit nesciunt autem? Exercitationem cum laborum repudiandae animi. Neque, repudiandae 
+                nihil a molestias natus corporis vero culpa praesentium provident optio aspernatur! Accusantium ipsam quis, 
+                voluptas ut laborum perferendis. Quas, quidem modi?</p>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    </body>
+</html>
