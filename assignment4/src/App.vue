@@ -1,6 +1,10 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+/* import HelloWorld from './components/HelloWorld.vue'
+import TheWelcome from './components/TheWelcome.vue' */
+import AccordianPage from './components/AccordianPage.vue'
+import GridPage from './components/GridPage.vue'
+import ImagesPage from './components/AccordianPage.vue'
+
 </script>
 
 <template>
