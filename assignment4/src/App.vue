@@ -1,51 +1,53 @@
 <script setup>
-/* import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue' */
+
+// import components/nav pages
+import { ref, computed } from "vue";
+import Home from './components/Home.vue'
 import AccordianPage from './components/AccordianPage.vue'
 import GridPage from './components/GridPage.vue'
-import ImagesPage from './components/AccordianPage.vue'
+import ImagesPage from './components/ImagesPage.vue'
+
+//create routes
+const routes = {
+  "/": Home,
+  "/grid": GridPage,
+  "/accordian": AccordianPage,
+  "/images": ImagesPage
+};
+
+//find current path using the window.location.hash and change the value of hash based on the nav link clicked
+const currentPath = ref(window.location.hash);
+
+window.addEventListener("hashchange", () => {
+  currentPath.value = window.location.hash;
+});
+
+const currentView = computed(() => {
+  return routes[currentPath.value.slice(1) || "/"] // || NotFound;
+});
 
 </script>
 
 <template>
   <header>
-    <!-- <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div> -->
+    <h1>website name</h1>
+    <a href="#/">Home</a>
+    <a href="#/grid">Grid Page</a>
+    <a href="#/accordian">Accordian Page</a>
+    <a href="#/images">Images Page</a>
+    <component :is="currentView" />
   </header>
-
-  <main>
-    <TheWelcome />
-  </main>
 </template>
 
 <style scoped>
-/* header {
-  line-height: 1.5;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-} */
+  h1 {
+    color: white;
+  }
+  a {
+    color: yellow;
+  }
 
 @media (min-width: 1024px) {
-  /* header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  } */
+  
 }
 </style>

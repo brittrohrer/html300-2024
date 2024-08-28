@@ -1,11 +1,11 @@
 <script setup>
 import { ref } from "vue";
 
-const name = ref("AccordianPage");
+const name = ref("Home");
 </script>
 
 <template>
-    <h2>This is Accordian</h2>
+    <h2>This is home</h2>
 </template>
 
 <style scoped>
