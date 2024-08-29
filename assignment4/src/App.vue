@@ -11,7 +11,7 @@ import ImagesPage from './components/ImagesPage.vue'
 const routes = {
   "/": Home,
   "/grid": GridPage,
-  "/accordian": AccordionPage,
+  "/accordion": AccordionPage,
   "/images": ImagesPage
 };
 
