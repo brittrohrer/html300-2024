@@ -2,10 +2,19 @@
 import { ref } from "vue";
 
 const name = ref("ImagesPage");
+ 
+
 </script>
 
+
 <template>
-    <h2>This is Images</h2>
+   <main>
+        <div>
+            <p>Hello</p>      
+        </div>
+   </main>
+
+   
 </template>
 
 <style scoped>
