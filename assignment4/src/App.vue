@@ -26,17 +26,20 @@ const currentView = computed(() => {
   return routes[currentPath.value.slice(1) || "/"] // || NotFound;
 });
 
+const title =ref(`Website Name`);
 </script>
 
 <template>
   <header>
-    <h1>website name</h1>
-    <a href="#/">Home</a>
-    <a href="#/grid">Grid Page</a>
-    <a href="#/accordian">Accordian Page</a>
-    <a href="#/images">Images Page</a>
-    <component :is="currentView" />
+      <h1>{{ title }}</h1>
+      <a href="#/">Home</a>
+      <a href="#/grid">Grid Page</a>
+      <a href="#/accordian">Accordian Page</a>
+      <a href="#/images">Images Page</a>
+      <component :is="currentView" />
   </header>
+  <!-- might need to do if else to show correct main content when click -->
+
 </template>
 
 <style scoped>
