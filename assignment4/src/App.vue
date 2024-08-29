@@ -3,7 +3,7 @@
 // import components/nav pages
 import { ref, computed } from "vue";
 import Home from './components/Home.vue'
-import AccordianPage from './components/AccordianPage.vue'
+import AccordionPage from './components/AccordionPage.vue'
 import GridPage from './components/GridPage.vue'
 import ImagesPage from './components/ImagesPage.vue'
 
@@ -11,7 +11,7 @@ import ImagesPage from './components/ImagesPage.vue'
 const routes = {
   "/": Home,
   "/grid": GridPage,
-  "/accordian": AccordianPage,
+  "/accordian": AccordionPage,
   "/images": ImagesPage
 };
 
@@ -34,7 +34,7 @@ const title =ref(`Website Name`);
       <h1>{{ title }}</h1>
       <a href="#/">Home</a>
       <a href="#/grid">Grid Page</a>
-      <a href="#/accordian">Accordian Page</a>
+      <a href="#/accordion">Accordion Page</a>
       <a href="#/images">Images Page</a>
       <component :is="currentView" />
   </header>

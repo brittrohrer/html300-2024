@@ -1,9 +1,9 @@
 <script setup>
 import { ref } from "vue";
 
-const name = ref("AccordianPage");
+const name = ref("AccordionPage");
 
-const accordian = ref([
+const accordion = ref([
     {
         header: `Accordion #1`,
         target: `#collapseOne`,
@@ -36,7 +36,7 @@ const show = ref(true)
 <template>
     <main>
         <div 
-        v-for="a in accordian"
+        v-for="a in accordion"
         :key="a.header"
         class="accordion" id="myFirstAccordion"
         >
