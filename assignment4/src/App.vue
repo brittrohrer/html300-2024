@@ -30,6 +30,7 @@ const title =ref(`Website Name`);
 </script>
 
 <template>
+  <body class="d-flex flex-column min-vh-100">
   <header class="bg-light">
     <h1>{{ title }}</h1>
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark"> 
@@ -43,11 +44,18 @@ const title =ref(`Website Name`);
     </nav>
   </header>
     <!-- might need to do if else to show correct main content when click -->
-
+  <footer class="footer bg-light mt-auto">
+            <h4 class="text-center">Footer Info</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, incidunt maiores eos quis quo cupiditate 
+                et odit laudantium a impedit nesciunt autem? Exercitationem cum laborum repudiandae animi. Neque, repudiandae 
+                nihil a molestias natus corporis vero culpa praesentium provident optio aspernatur! Accusantium ipsam quis, 
+                voluptas ut laborum perferendis. Quas, quidem modi?</p>
+  </footer>
+  </body>
 </template>
 
 <style scoped>
-  h1 {
+  h1,h4,p {
     color: black;
   }
   header {

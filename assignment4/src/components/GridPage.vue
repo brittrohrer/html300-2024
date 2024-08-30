@@ -65,7 +65,7 @@ const gridThree = ref([
 </script>
 
 <template>
-    <main>
+    <main class="container">
         
         <div class="row bg-primary">
             <h2>{{headerOne}}</h2>
@@ -100,7 +100,7 @@ const gridThree = ref([
 </template>
 
 <style scoped>
-    h2 {
-        color:green;
-    }
+h2,h3,p {
+    color: black;
+}
 </style>

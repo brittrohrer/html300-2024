@@ -34,7 +34,7 @@ const show = ref(true)
 </script>
 
 <template>
-    <main>
+    <main class="container">
         <div 
         v-for="a in accordion"
         :key="a.header"

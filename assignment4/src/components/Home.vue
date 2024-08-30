@@ -29,7 +29,7 @@ const cards = ref([
 </script>
 
 <template>
-    <main>
+    <main class="container">
         <div container d-flex flex-row justify-content-evenly mt-5 mb-5 flex-wrap gap-3>
             <div class="card" 
                 style="width: 18rem;" 
@@ -49,7 +49,5 @@ const cards = ref([
 </template>
 
 <style scoped>
-h2 {
-    color:green;
-}
+
 </style>
