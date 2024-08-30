@@ -30,25 +30,30 @@ const title =ref(`Website Name`);
 </script>
 
 <template>
-  <header>
-      <h1>{{ title }}</h1>
-      <a href="#/">Home</a>
-      <a href="#/grid">Grid Page</a>
-      <a href="#/accordion">Accordion Page</a>
-      <a href="#/images">Images Page</a>
-      <component :is="currentView" />
+  <header class="bg-light">
+    <h1>{{ title }}</h1>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark"> 
+      <ul class="nav navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="#/">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#/images">Images Page</a></li>
+        <li class="nav-item"><a class="nav-link" href="#/accordion">Accordion Page</a></li>
+        <li class="nav-item"><a class="nav-link" href="#/grid">Grid Page</a></li>
+        <component :is="currentView" />
+      </ul>
+    </nav>
   </header>
-  <!-- might need to do if else to show correct main content when click -->
+    <!-- might need to do if else to show correct main content when click -->
 
 </template>
 
 <style scoped>
   h1 {
-    color: white;
+    color: black;
   }
-  a {
-    color: yellow;
+  header {
+    width: 100%;
   }
+
 
 @media (min-width: 1024px) {
   
