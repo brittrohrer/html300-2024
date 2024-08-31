@@ -30,7 +30,7 @@ const cards = ref([
 
 <template>
     <main class="container">
-        <div container d-flex flex-row justify-content-evenly mt-5 mb-5 flex-wrap gap-3>
+        <div class= "container d-flex flex-row justify-content-evenly mt-5 mb-5 flex-wrap gap-3">
             <div class="card" 
                 style="width: 18rem;" 
                 v-for="card in cards" :key="card.name">

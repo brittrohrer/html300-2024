@@ -37,7 +37,7 @@ const footerText= ref(`Lorem ipsum dolor sit amet consectetur adipisicing elit. 
 </script>
 
 <template>
-  <body class="d-flex flex-column min-vh-100">
+  <div>
     <header class="bg-light">
       <h1>{{ title }}</h1>
       <nav class="navbar navbar-expand-sm bg-dark navbar-dark"> 
@@ -56,7 +56,7 @@ const footerText= ref(`Lorem ipsum dolor sit amet consectetur adipisicing elit. 
       <h4 class="text-center">{{footerTitle}}</h4>
         <p>{{footerText}}</p>
     </footer>
-  </body>
+  </div>
 </template>
 
 <style scoped>
