@@ -3,6 +3,7 @@ import { ref } from "vue";
 
 const name = ref("GridPage");
 
+/* Create array and header variable to dynamically build page content for each grid container */
 const headerOne =ref("First Container Title")
 const gridOne = ref([
     {
@@ -66,7 +67,7 @@ const gridThree = ref([
 
 <template>
     <main class="container">
-        
+        <!-- use a v-for for each grid section to display the header, title and body with each of their specified layouts-->
         <div class="row bg-primary">
             <h2>{{headerOne}}</h2>
             <div class="col-md-3"

@@ -26,6 +26,7 @@ const currentView = computed(() => {
   return routes[currentPath.value.slice(1) || "/"] // || NotFound;
 });
 
+/* use variable that can be changed and create web content dynamically */
 const title =ref(`Website Name`);
 
 const footerTitle = ref (`Footer Info`);
@@ -38,6 +39,7 @@ const footerText= ref(`Lorem ipsum dolor sit amet consectetur adipisicing elit. 
 
 <template>
   <div>
+    <!--create header with title and navigation routes and the footer to be used accross all web pages while the main content changes based on the current path selected -->
     <header class="bg-light">
       <h1>{{ title }}</h1>
       <nav class="navbar navbar-expand-sm bg-dark navbar-dark"> 
@@ -49,7 +51,7 @@ const footerText= ref(`Lorem ipsum dolor sit amet consectetur adipisicing elit. 
         </ul>
       </nav>
     </header>
-
+    <!-- place component in the area of the main element so each nav link will place the content for each vue page in the desired area-->
     <component :is="currentView" />
 
     <footer class="footer bg-light mt-auto">

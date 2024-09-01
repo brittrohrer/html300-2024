@@ -3,6 +3,7 @@ import { ref } from "vue";
 
 const name = ref("AccordionPage");
 
+/* create array of accordian content to call on in template*/
 const accordion = ref([
     {
         header: `Accordion #1`,
@@ -35,13 +36,13 @@ const show = ref(true)
 
 <template>
     <main class="container">
-        <div 
-        v-for="a in accordion"
-        :key="a.header"
-        class="accordion" id="myFirstAccordion"
-        >
-            <div class="accordion-item">
+        <div class="accordion" id="myFirstAccordion">
+            <!-- use v-for to loop through accordian array and display header and button -->
+            <div class="accordion-item"
+                v-for="a in accordion"
+                :key="a.header">
                 <h2 class="accordion-header">{{a.header}}</h2>    
+                <!-- create button with target pulled from array and click event to show the body/content when button is clicked for target-->
                 <button
                     class="accordion-button collapsed"
                     type="button" 
@@ -52,6 +53,7 @@ const show = ref(true)
                     @click= "show"
                 >
                 </button>
+                <!-- identify target based on id and show the body -->
                 <div :id="a.id" class="accordion-collapse collapse" data-bs-parent="#myFirstAccordion">
                     <div v-show="show" class="accordion-body">
                         {{a.body}}
@@ -65,6 +67,6 @@ const show = ref(true)
 
 <style scoped>
 h2 {
-    color:green;
+    color:black;
 }
 </style>
