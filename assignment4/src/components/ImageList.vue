@@ -1,15 +1,22 @@
 <script setup>
     import {defineProps, ref } from "vue";
-    const props = defineProps ({
+    // Create Prop with simple type validator
+    const prop = defineProps({
         link: String,
-        text: String,
+        text: Number,
         title: String,
-    })
+        class: String,
+    });
 </script>
 
 <template>
 
-    <img :src='props.link' :alt='props.text' :title='props.title'>
+    <img 
+    :src='prop.link' 
+    :alt='prop.text' 
+    :title='prop.title'
+    :class='prop.class'
+    >
 
 </template>
 

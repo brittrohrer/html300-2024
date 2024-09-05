@@ -13,47 +13,75 @@ const images = ref([
     {
         link: `https://live.staticflickr.com/65535/51537246564_4d6e3ea0fd_b.jpg`,
         text: `Mountain and waterfall in iceland`,
-        title: 'test1'
+        title: `Kirkjufell, Iceland`,
+        class: `img-fluid w-75 p-2 d-block mx-auto`
     },
     {
         link: `https://live.staticflickr.com/65535/51889963733_163ddcbf60_b.jpg`,
         text: `mountais and forest reflected in lake`,
-        title: 'test2'
+        title: `Glacier National Park, Montana USA`,
+        class: `img-fluid w-75 p-2 d-block mx-auto`
     },
     {
-        link: `https://images.pexels.com/photos/1166209/pexels-photo-1166209.jpeg?auto=compress&cs=tinysrgb&w=1200`,
+        link: `https://images.pexels.com/photos/1166209/pexels-photo-1166209.jpeg`,
         text: `lavender fields`,
-        title: 'test2'
+        title: `Lavender Field, France`,
+        class: `img-fluid w-75 p-2 d-block mx-auto`
     },
     {
-        link: `https://images.pexels.com/photos/1933239/pexels-photo-1933239.jpeg?auto=compress&cs=tinysrgb&w=1200`,
+        link: `https://images.pexels.com/photos/1933239/pexels-photo-1933239.jpeg`,
         text: `northern lights over the mountains`,
-        title: 'test2'
+        title: `Northern Lights, Norway`,
+        class: `img-fluid w-75 p-2 d-block mx-auto`
     },
     {
-        link: `https://images.pexels.com/photos/632522/pexels-photo-632522.jpeg?auto=compress&cs=tinysrgb&w=1200`,
+        link: `https://images.pexels.com/photos/632522/pexels-photo-632522.jpeg`,
         text: `cliff side city in italy`,
-        title: 'test2'
-    },      
+        title: `Camogli, Italy`,
+        class: `img-fluid w-75 p-2 d-block mx-auto`
+    },    
+    {
+        link:`https://images.pexels.com/photos/2437296/pexels-photo-2437296.jpeg`,
+        text: `building on lake infront of mountain`,
+        title: `Lake Misurina, Italy`,
+        class: `img-fluid w-75 p-2 d-block mx-auto`
+    },
+    {
+        link: `https://images.pexels.com/photos/1955134/pexels-photo-1955134.jpeg`,
+        text: `a long open road`,
+        title: `Road in Iceland`,
+        class: `img-fluid w-75 p-2 d-block mx-auto`
+    },
+    {
+        link: `https://images.pexels.com/photos/3648269/pexels-photo-3648269.jpeg`,
+        text: `rio from high viewpoint`,
+        title: `Rio de Janeiro, Brazil`,
+        class: `img-fluid w-75 p-2 d-block mx-auto`
+    },
+
     ],
  );
+
 
 /* create array of B/W images to call on in template*/
  const imagesCarousel = ref([
     {
         class: `carousel-item active`,
-        link: `https://images.pexels.com/photos/1529881/pexels-photo-1529881.jpeg?auto=compress&cs=tinysrgb&w=1200`,
-        text: `forest in black and white`
+        link: `https://images.pexels.com/photos/1529881/pexels-photo-1529881.jpeg`,
+        text: `forest in black and white`,
+        title: `title`
     },
     {
         class: `carousel-item`,
-        link: `https://images.pexels.com/photos/763097/pexels-photo-763097.jpeg?auto=compress&cs=tinysrgb&w=1200`,
-        text: `mountains in black and white`
+        link: `https://images.pexels.com/photos/763097/pexels-photo-763097.jpeg`,
+        text: `mountains in black and white`,
+        title: `title`
     },
     {
         class: `carousel-item`,
-        link: `https://images.pexels.com/photos/276374/pexels-photo-276374.jpeg?auto=compress&cs=tinysrgb&w=1200`,
-        text: `mountains and lake in black and white`
+        link: `https://images.pexels.com/photos/276374/pexels-photo-276374.jpeg`,
+        text: `mountains and lake in black and white`,
+        title: `title`
     },
  ],);
 </script>
@@ -63,29 +91,31 @@ const images = ref([
    <main>
         <div class="container mt-5 d-flex flex-wrap gap-2 justify-content-center">
             <!-- use a v-for with the binding key to loop thru all the objects in the images array
-            use : to bind object in array  to the src and alt text to display images -->
+            use : to bind object in array  to the src and alt text to display images 
+            use ImageList prop to get images properties-->
             <ImageList 
                  v-for='image in images' 
                  :key='image.link'
                  :src='image.link' 
                  :alt='image.text'
-                 :title='image.title'>   
+                 :title='image.title'
+                 :class ='image.class'>   
             </ImageList>    
         </div>
         <div id="myFirstCarousel" class="carousel slide container mt-5 mb-5 w-75">
                 <div class="carousel-inner">
                   <!--create image carousel 
                   use v-for to loop thrue imagesCarousel array
-                  use imageC.class to make sure the first image of the array has 'active' while the following images don't-->
-                    <div :class="imageC.class"
-                        v-for="imageC in imagesCarousel"
-                        :key="imageC.link">
-                        
-                        <img  
-                        class="d-block w-100"
-                        :src="imageC.link"
-                        :alt="imageC.text">
-                    </div>
+                  use imageC.class to make sure the first image of the array has 'active' while the following images don't
+                  use ImageList prop to get imagesCarousel properties-->
+                    <ImageList
+                    v-for='imageC in imagesCarousel' 
+                    :key='imageC.link'
+                    :src='imageC.link' 
+                    :alt='imageC.text'
+                    :title='imageC.title'
+                    :class ='imageC.class'>
+                    </ImageList>
                 </div>
                 <!-- use buttons to move thru the image carousel-->
                 <button class="carousel-control-prev" 
