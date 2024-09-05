@@ -1,47 +1,40 @@
 <script setup>
 import { ref } from "vue";
 
+//Image Prop Components
+import ImageList from './ImageList.vue';
+
+
 const name = ref("ImagesPage");
+ 
 
 /* create array of Landscape images to call on in template*/
-const imagesLandscape = ref([
+const images = ref([
     {
         link: `https://live.staticflickr.com/65535/51537246564_4d6e3ea0fd_b.jpg`,
-        text: `Mountain and waterfall in iceland`
+        text: `Mountain and waterfall in iceland`,
+        title: 'test1'
     },
     {
         link: `https://live.staticflickr.com/65535/51889963733_163ddcbf60_b.jpg`,
-        text: `mountais and forest reflected in lake`
+        text: `mountais and forest reflected in lake`,
+        title: 'test2'
     },
     {
         link: `https://images.pexels.com/photos/1166209/pexels-photo-1166209.jpeg?auto=compress&cs=tinysrgb&w=1200`,
-        text: `lavender fields`
+        text: `lavender fields`,
+        title: 'test2'
     },
     {
         link: `https://images.pexels.com/photos/1933239/pexels-photo-1933239.jpeg?auto=compress&cs=tinysrgb&w=1200`,
-        text: `northern lights over the mountains`
+        text: `northern lights over the mountains`,
+        title: 'test2'
     },
     {
         link: `https://images.pexels.com/photos/632522/pexels-photo-632522.jpeg?auto=compress&cs=tinysrgb&w=1200`,
-        text: `cliff side city in italy`
+        text: `cliff side city in italy`,
+        title: 'test2'
     },      
-    ],
- );
-
-/* create array of Portrait images to call on in template*/
- const imagesPortrait = ref([
-    {
-        link:`https://images.pexels.com/photos/2437296/pexels-photo-2437296.jpeg?auto=compress&cs=tinysrgb&w=1200`,
-        text: `building on lake infront of mountain`
-    },
-    {
-        link: `https://images.pexels.com/photos/1955134/pexels-photo-1955134.jpeg?auto=compress&cs=tinysrgb&w=1200`,
-        text: `a long open road`
-    },
-    {
-        link: `https://images.pexels.com/photos/3648269/pexels-photo-3648269.jpeg?auto=compress&cs=tinysrgb&w=1200`,
-        text: `rio from high viewpoint`
-    },
     ],
  );
 
@@ -71,20 +64,13 @@ const imagesLandscape = ref([
         <div class="container mt-5 d-flex flex-wrap gap-2 justify-content-center">
             <!-- use a v-for with the binding key to loop thru all the objects in the images array
             use : to bind object in array  to the src and alt text to display images -->
-            <img class="img-fluid w-75 p-2 d-block mx-auto" 
-                 v-for="imageL in imagesLandscape" 
-                 :key="imageL.link"
-                 :src="imageL.link" 
-                 :alt="imageL.text">       
-        </div>
-        <div class="container mt-5 d-flex flex-wrap gap-2 justify-content-center">
-             <!-- use a v-for with the binding key to loop thru all the objects in the images array
-            use : to bind object in array  to the src and alt text to display images -->
-            <img class="img-fluid w-50 object-fit-contain"
-                v-for="imageP in imagesPortrait"
-                :key="imageP.link"
-                :src="imageP.link"
-                :alt="imageP.text">
+            <ImageList 
+                 v-for='image in images' 
+                 :key='image.link'
+                 :src='image.link' 
+                 :alt='image.text'
+                 :title='image.title'>   
+            </ImageList>    
         </div>
         <div id="myFirstCarousel" class="carousel slide container mt-5 mb-5 w-75">
                 <div class="carousel-inner">

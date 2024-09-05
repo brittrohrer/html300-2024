@@ -1,13 +1,16 @@
 <script setup>
 
-// import components/nav pages
+// Page Elements Components
+import Header from './components/Header.vue'
+import Footer from './components/Footer.vue'
+//Nav Pages/Components and Computing Current View
 import { ref, computed } from "vue";
 import Home from './components/Home.vue'
 import AccordionPage from './components/AccordionPage.vue'
 import GridPage from './components/GridPage.vue'
 import ImagesPage from './components/ImagesPage.vue'
-import Header from './components/Header.vue'
-import Footer from './components/Footer.vue'
+
+
 
 //create routes
 const routes = {
@@ -34,16 +37,19 @@ const currentView = computed(() => {
 </script>
 
 <template>
-  <Header>
-  </Header>
-  
-    
+  <div> 
+    <Header>
+      <!-- This is the Header slot -->
+    </Header>
     
     <!-- place component in the area of the main element so each nav link will place the content for each vue page in the desired area-->
     <component :is="currentView" />
-
-  <Footer>
-  </Footer>
+    
+    <Footer>
+      <!-- This is the Footer slot -->
+    </Footer>
+    
+  </div>  
 </template>
 
 <style scoped>
