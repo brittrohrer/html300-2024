@@ -19,5 +19,7 @@ const footerText= ref(`Lorem ipsum dolor sit amet consectetur adipisicing elit. 
 </template>
 
 <style scoped>
-
+h4,p {
+    color: black;
+}
 </style>

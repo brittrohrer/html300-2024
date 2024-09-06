@@ -23,5 +23,7 @@ const title =ref(`Website Name`);
 </template>
 
 <style scoped>
-
+h1 {
+    color: black;
+}
 </style>
