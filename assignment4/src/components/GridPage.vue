@@ -1,6 +1,6 @@
 <script setup>
-import { ref } from "vue";
 
+import { ref } from "vue";
 const name = ref("GridPage");
 
 /* Create array and header variable to dynamically build page content for each grid container */

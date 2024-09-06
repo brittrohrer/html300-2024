@@ -1,10 +1,9 @@
 <script setup>
-import { ref } from "vue";
 
+import { ref } from "vue";
 const name = ref("Home");
 
 const touchButton = ref(true);
-
 
 /* Jumbotron
 created ref variables for this so that in the template section the content could be rendered dynamically
@@ -52,24 +51,23 @@ const cards = ref([
                 },
             ],
 );
-
 </script>
 
 <template>
     <main class="container">
         <div class="jumbotron jumbotron-fluid bg-info">
-                <!--create jumbotron -->
-                <div class="container mt-5 p-2">
-                    <!-- call the jumbotron title from the script section -->
-                    <h2 class="display-4">{{jumboTitle}}</h2>
-                    <!--create top margin of 2 text and emphasize text with "lead"
-                    also create a button and clickevent that use if/else that will use the state of the button when clicked (true or false) 
-                    to determine with text to display-->
-                    <button class="btn btn-danger" @click="touchButton = !touchButton">Click Me!</button>
-                    <p v-if ="touchButton" class="lead mt-2">{{jumboText}}</p>
-                    <p v-else class="lead mt-2">{{jumboText2}}</p>
-                </div>
+            <!--create jumbotron -->
+            <div class="container mt-5 p-2">
+                <!-- call the jumbotron title from the script section -->
+                <h2 class="display-4">{{jumboTitle}}</h2>
+                <!--create top margin of 2 text and emphasize text with "lead"
+                also create a button and clickevent that use if/else that will use the state of the button when clicked (true or false) 
+                to determine with text to display-->
+                <button class="btn btn-danger" @click="touchButton = !touchButton">Click Me!</button>
+                <p v-if ="touchButton" class="lead mt-2">{{jumboText}}</p>
+                <p v-else class="lead mt-2">{{jumboText2}}</p>
             </div>
+        </div>
         <div class= "container d-flex flex-row justify-content-evenly mt-5 mb-5 flex-wrap gap-3">
             <!-- use a vue for loop to loop thru the cards array in script section to create each card-->
             <div class="card" 
@@ -82,7 +80,8 @@ const cards = ref([
                     <!-- bind the card link so the link can function properly-->
                     <a :href="card.link" 
                         class="btn btn-primary">
-                        {{card.button}}</a>
+                        {{card.button}}
+                    </a>
                 </div>
             </div>
         </div>
@@ -94,7 +93,5 @@ const cards = ref([
     p, h2 {
         color: black;
     }
-    .toggle-button {
-        margin-top: 2rem;
-    }
+    
 </style>

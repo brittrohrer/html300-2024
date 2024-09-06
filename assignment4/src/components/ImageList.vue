@@ -1,4 +1,5 @@
 <script setup>
+
     import {defineProps, ref } from "vue";
     // Create Prop with simple type validator
     const prop = defineProps({
@@ -21,5 +22,4 @@
 </template>
 
 <style>
-
 </style>

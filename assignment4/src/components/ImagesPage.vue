@@ -1,12 +1,11 @@
 <script setup>
+
 import { ref } from "vue";
+const name = ref("ImagesPage");
 
 //Image Prop Components
 import ImageList from './ImageList.vue';
 
-
-const name = ref("ImagesPage");
- 
 
 /* create array of Landscape images to call on in template*/
 const images = ref([
@@ -99,8 +98,9 @@ const images = ref([
                  :src='image.link' 
                  :alt='image.text'
                  :title='image.title'
-                 :class ='image.class'>   
-            </ImageList>    
+                 :class ='image.class'
+                >  
+            </ImageList> 
         </div>
         <div id="myFirstCarousel" class="carousel slide container mt-5 mb-5 w-75">
                 <div class="carousel-inner">
@@ -141,7 +141,5 @@ const images = ref([
 </template>
 
 <style scoped>
-h2 {
-    color:green;
-}
+
 </style>
