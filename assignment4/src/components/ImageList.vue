@@ -1,25 +1,41 @@
 <script setup>
 
-    import {defineProps, ref } from "vue";
-    // Create Prop with simple type validator
-    const prop = defineProps({
-        link: String,
-        text: Number,
+import {defineProps} from "vue";
+/* 
+    Create Prop with simple type validator
+    Declare what type of variables and what type of data we are recieving from the parent
+*/
+const prop = defineProps({
+        src: String,
+        alt: String,
         title: String,
         class: String,
-    });
+        index: Number,
+});
+    
+
 </script>
 
+<!-- 
+    How we want our component structured
+-->
 <template>
-
-    <img 
-    :src='prop.link' 
-    :alt='prop.text' 
-    :title='prop.title'
-    :class='prop.class'
-    >
-
+    <div>
+        <img :key="prop.src"
+            :src="prop.src"
+            :alt="prop.alt"
+            :class="prop.class"
+            :title="prop.title"
+            
+        >
+        <p>Caption: {{prop.title}}</p>
+        <p>Index: {{index}}</p>
+    </div>
 </template>
 
 <style>
+p {
+    color: green;
+}
+
 </style>
