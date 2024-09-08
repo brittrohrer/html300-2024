@@ -9,49 +9,49 @@ const images = ref([
         src: 'https://live.staticflickr.com/65535/51537246564_4d6e3ea0fd_b.jpg',
         alt: 'Mountain and waterfall in iceland',
         title: 'Kirkjufell, Iceland',
-        class: 'img-fluid w-75 p-2 d-block mx-auto'
+        class: 'img-fluid w-75 p-2 d-block mx-auto img'
     },
     {
         src: 'https://live.staticflickr.com/65535/51889963733_163ddcbf60_b.jpg',
         alt: 'mountais and forest reflected in lake',
         title: 'Glacier National Park, Montana USA',
-        class: 'img-fluid w-75 p-2 d-block mx-auto'
+        class: 'img-fluid w-75 p-2 d-block mx-auto img'
     },
     {
         src: 'https://images.pexels.com/photos/1166209/pexels-photo-1166209.jpeg',
         alt: 'lavender fields',
         title: 'Lavender Field, France',
-        class: 'img-fluid w-75 p-2 d-block mx-auto'
+        class: 'img-fluid w-75 p-2 d-block mx-auto img'
     },
     {
         src: 'https://images.pexels.com/photos/1933239/pexels-photo-1933239.jpeg',
         alt: 'northern lights over the mountains',
         title: 'Northern Lights, Norway',
-        class: 'img-fluid w-75 p-2 d-block mx-auto'
+        class: 'img-fluid w-75 p-2 d-block mx-auto img'
     },
     {
         src: 'https://images.pexels.com/photos/632522/pexels-photo-632522.jpeg',
         alt: 'cliff side city in italy',
         title: 'Camogli, Italy',
-        class: 'img-fluid w-75 p-2 d-block mx-auto'
+        class: 'img-fluid w-75 p-2 d-block mx-auto img'
     },    
     {
         src:'https://images.pexels.com/photos/2437296/pexels-photo-2437296.jpeg',
         alt: 'building on lake infront of mountain',
         title: 'Lake Misurina, Italy',
-        class: 'img-fluid w-75 p-2 d-block mx-auto'
+        class: 'img-fluid w-75 p-2 d-block mx-auto img'
     },
     {
         src: 'https://images.pexels.com/photos/1955134/pexels-photo-1955134.jpeg',
         alt: 'a long open road',
         title: 'Road in Iceland',
-        class: 'img-fluid w-75 p-2 d-block mx-auto'
+        class: 'img-fluid w-75 p-2 d-block mx-auto img'
     },
     {
         src: 'https://images.pexels.com/photos/3648269/pexels-photo-3648269.jpeg',
         alt: 'rio from high viewpoint',
         title: 'Rio de Janeiro, Brazil',
-        class: 'img-fluid w-75 p-2 d-block mx-auto'
+        class: 'img-fluid w-75 p-2 d-block mx-auto img'
     },
     ],);
 
@@ -79,10 +79,18 @@ const images = ref([
  ],);
 
 
-//Image Image Prop Component
+//Image Prop Component
 import ImageList from './ImageList.vue'; 
 
-const toggleBorder = ref(false);
+/* function borderToggle () {
+    let image = document.querySelector('.img-sel')
+    console.log('image selected');
+    image.style.border = "solid black";
+} */
+
+function useBorderFunc(index) {
+    console.log(index);
+}
 
 </script>
 
@@ -102,8 +110,7 @@ const toggleBorder = ref(false);
                  :title='image.title'
                  :class='image.class'
                  :index="index"
-                 @click="toggleBorder = !toggleBorder"
-                :class="{border : toggleBorder}"
+                 v-on:click="useBorderFunc(index)"
             >
          </ImageList>
             
@@ -114,7 +121,7 @@ const toggleBorder = ref(false);
                   use v-for to loop thrue imagesCarousel array
                   use imageC.class to make sure the first image of the array has 'active' while the following images don't
                   use ImageList prop to get imagesCarousel properties-->
-                    <ImageList
+                    <img
                     v-for='imageC in imagesCarousel' 
                     :key='imageC.src'
                     :src='imageC.src' 
@@ -122,7 +129,6 @@ const toggleBorder = ref(false);
                     :title='imageC.title'
                     :class='imageC.class'
                     >
-                    </ImageList>
                 </div>
                 <!-- use buttons to move thru the image carousel-->
                 <button class="carousel-control-prev" 
@@ -148,7 +154,5 @@ const toggleBorder = ref(false);
 </template>
 
 <style scoped>
-.border {
-    border: "solid 5px black";
-}
+
 </style>

@@ -26,7 +26,6 @@ const prop = defineProps({
             :alt="prop.alt"
             :class="prop.class"
             :title="prop.title"
-            
         >
         <p>Caption: {{prop.title}}</p>
         <p>Index: {{index}}</p>
