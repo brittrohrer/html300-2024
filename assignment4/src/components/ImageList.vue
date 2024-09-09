@@ -1,6 +1,6 @@
 <script setup>
 
-import {defineProps, getCurrentInstance, ref} from "vue";
+import {defineProps, ref} from "vue";
 /* 
     Create Prop with simple type validator
     Declare what type of variables and what type of data we are recieving from the parent
@@ -18,7 +18,6 @@ function useBorderFunc(e, index) {
     this.isActive = !this.isActive;
     if (this.isActive === true) {
         console.log (index + ' is active');
-        console.log (e);
         e.target.style.border = "solid black";
     }
     else {
@@ -41,7 +40,6 @@ function useBorderFunc(e, index) {
             :title="prop.title"
             @click = "useBorderFunc($event, index)"
         >
-        <p>Index: {{index}}</p>
     </div>
 </template>
 

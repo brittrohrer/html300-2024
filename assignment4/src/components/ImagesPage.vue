@@ -9,57 +9,49 @@ const images = ref([
         src: 'https://live.staticflickr.com/65535/51537246564_4d6e3ea0fd_b.jpg',
         alt: 'Mountain and waterfall in iceland',
         title: 'Kirkjufell, Iceland',
-        class: 'img-fluid w-75 p-2 d-block mx-auto img',
-        id: 'pic1'
+        class: 'img-fluid w-75 p-2 d-block mx-auto img'
     },
     {
         src: 'https://live.staticflickr.com/65535/51889963733_163ddcbf60_b.jpg',
         alt: 'mountais and forest reflected in lake',
         title: 'Glacier National Park, Montana USA',
-        class: 'img-fluid w-75 p-2 d-block mx-auto img',
-        id: 'pic2'
+        class: 'img-fluid w-75 p-2 d-block mx-auto img'
     },
     {
         src: 'https://images.pexels.com/photos/1166209/pexels-photo-1166209.jpeg',
         alt: 'lavender fields',
         title: 'Lavender Field, France',
-        class: 'img-fluid w-75 p-2 d-block mx-auto img',
-        id: 'pic3'
+        class: 'img-fluid w-75 p-2 d-block mx-auto img'
     },
     {
         src: 'https://images.pexels.com/photos/1933239/pexels-photo-1933239.jpeg',
         alt: 'northern lights over the mountains',
         title: 'Northern Lights, Norway',
-        class: 'img-fluid w-75 p-2 d-block mx-auto img',
-        id: 'pic4'
+        class: 'img-fluid w-75 p-2 d-block mx-auto img'
     },
     {
         src: 'https://images.pexels.com/photos/632522/pexels-photo-632522.jpeg',
         alt: 'cliff side city in italy',
         title: 'Camogli, Italy',
-        class: 'img-fluid w-75 p-2 d-block mx-auto img',
-        id: 'pic5'
+        class: 'img-fluid w-75 p-2 d-block mx-auto img'
     },    
     {
         src:'https://images.pexels.com/photos/2437296/pexels-photo-2437296.jpeg',
         alt: 'building on lake infront of mountain',
         title: 'Lake Misurina, Italy',
-        class: 'img-fluid w-75 p-2 d-block mx-auto img',
-        id: 'pic6'
+        class: 'img-fluid w-75 p-2 d-block mx-auto img'
     },
     {
         src: 'https://images.pexels.com/photos/1955134/pexels-photo-1955134.jpeg',
         alt: 'a long open road',
         title: 'Road in Iceland',
-        class: 'img-fluid w-75 p-2 d-block mx-auto img',
-        id: 'pic7'
+        class: 'img-fluid w-75 p-2 d-block mx-auto img'
     },
     {
         src: 'https://images.pexels.com/photos/3648269/pexels-photo-3648269.jpeg',
         alt: 'rio from high viewpoint',
         title: 'Rio de Janeiro, Brazil',
-        class: 'img-fluid w-75 p-2 d-block mx-auto img',
-        id: 'pic8'
+        class: 'img-fluid w-75 p-2 d-block mx-auto img'
     },
     ],);
 
