@@ -1,6 +1,8 @@
 <script setup>
 
 import {defineProps, ref} from "vue";
+
+
 /* 
     Create Prop with simple type validator
     Declare what type of variables and what type of data we are recieving from the parent

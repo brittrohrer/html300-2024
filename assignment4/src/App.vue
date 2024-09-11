@@ -1,10 +1,11 @@
 <script setup>
+import { ref, computed } from "vue";
 
 // Page Elements Components
 import Header from './components/Header.vue'
 import Footer from './components/Footer.vue'
 //Nav Pages/Components and Computing Current View
-import { ref, computed } from "vue";
+
 import Home from './components/Home.vue'
 import AccordionPage from './components/AccordionPage.vue'
 import GridPage from './components/GridPage.vue'
