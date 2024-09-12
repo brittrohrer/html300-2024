@@ -38,7 +38,7 @@ function useBorderFunc(e, index) {
     How we want our component structured
 -->
 <template>
-    <div>
+    <div class= "col-3">
         <!-- 
             bind with prop objects
             use click event to call funtion
