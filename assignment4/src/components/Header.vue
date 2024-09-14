@@ -3,7 +3,7 @@
 import {ref} from "vue";
 
 /* use variable that can be changed and create web content dynamically */
-const title =ref(`Website Name`);
+const title =ref(`Photography`);
 
 </script>
 

@@ -8,18 +8,11 @@ const touchButton = ref(true);
 /* Jumbotron
 created ref variables for this so that in the template section the content could be rendered dynamically
 and be changed easily if the text changed*/
-const jumboTitle = ref(`Jumbotron Title`);
-const jumboText = ref(` This is the first jumbotron text!!!!!!!!!!!!!                                
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium debitis facere, 
-                        vitae in iste beatae quidem repudiandae optio dignissimos eos cupiditate suscipit 
-                        explicabo nihil atque et molestias, ratione maxime repellat eaque exercitationem quaerat 
-                        ipsa similique excepturi voluptatibus. Quibusdam placeat blanditiis sunt modi quas recusandae, 
-                        saepe laboriosam ea facilis. Pariatur reiciendis beatae quod atque quas inventore unde assumenda 
-                        debitis incidunt itaque.`);
-const jumboText2 = ref(` This is the Second jumbotron text!!!!!!!!!!!!!                                
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium debitis facere, 
-                        vitae in iste beatae quidem repudiandae optio dignissimos eos cupiditate suscipit 
-                        explicabo nihil atque et molestias, ratione maxime repellat eaque exercitationem quaerat.`);       
+const jumboTitle = ref(`What is it?`);
+const jumboText = ref(` Photography is producing images by the action of light on a sensitive surface. The greek translation is "draw from light".`);
+const jumboText2 = ref(`Photography is all about capturing the light. To capture a photo, we need to control both 
+the amount of light that is exposed to the surface and control the sensitivity of the surface to that light.
+This is where the Exposure Triangle comes into play, which is comprised of aperture, shutter speed, and ISO.`);       
 
 
 /* Cards
