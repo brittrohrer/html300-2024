@@ -4,64 +4,87 @@ import { ref } from "vue";
 const name = ref("GridPage");
 
 /* Create array and header variable to dynamically build page content for each grid container */
-const headerOne =ref("Aperture")
+const headerOne =ref("Natural Wonders")
 const gridOne = ref([
     {
-        class: `col-lg-6`,
-        title: `What is Aperture?`,
-        body: `The aperture controls the area which allows light to pass through the camera lense.
-                The aperture setting determines a photos depth of field which is the range in which
-                the object in the photo appear in focus. It is expresed in terms of f-stop. `
+        class: `col-lg-12`,
+        title: `Title`,
+        body: `There are six locations in Michigan that are managed by the National Park Service.`
     },
     {
-        class: `col-lg-3 text-center`,
-        title: `Wide Aperture`,
-        body: `This is when a low f-stop is used. It creates a shallow depth of field. It is great for 
-                portrait photography where the subject/person is in focus while the background is out of focus.`
+        class: `col-lg-4 text-center`,
+        title: `Isle Royale National Park`,
+        body: `Isle Royale National Park is an island located in the northern region of Lake Superior. 
+                Isle Royale encompasses an area of 132,018 acres, and can only be explored by foot. The park can only be reached by ferry or seaplane and only from April to November.`
     },
     {
-        class: `col-lg-3 text-center`,
-        title: `Narrow Aperture`,
-        body: `This is when a high f-stop is used and creates a large depth of field. It is ideal for landscape phtography 
-        where more of the entire image is in focus.`               
+        class: `col-lg-4 text-center`,
+        title: `Keweenaw National Historical Park`,
+        body: `This park consists of 21 historic sites along with the old copper mines. It is home to the world’s oldest and largest lava flow, which was first mined more than 7,000 years ago.`               
+    },
+    {
+        class: `col-lg-4 text-center`,
+        title: `North Country National Scenic Trail`,
+        body: `The North Country Trail is a 4,800 mile trail that goes from Vermont to North Dakota. It is the longest of the National Scenic Trails. The Upper Peninsula includes 550 miles of the 
+                trail while the Lower Peninsula includes 600 miles. `
+    },
+    {
+        class: `col-lg-4 text-center`,
+        title: `Pictured Rocks National Lakeshore`,
+        body: `The park includes miles of lakeshore with sandstone cliffs, beaches, waterfalls and sand dunes. It is one of the most popular and visited locations in Michigan. The minerals seeping 
+                from the cliff side create an almost painted scene down the cliff to Lake Superior. `               
+    },
+    {
+        class: `col-lg-4 text-center`,
+        title: `River Raisin National Battlefield Park`,
+        body: `This is the historic location of the River Raisin Battle that took place in January 1813 during the War of 1812. The River Raisin Battle resulted in the forced relocation and assimilation 
+                of the Native Peoples who resided there.`
+    },
+    {
+        class: `col-lg-4 text-center`,
+        title: `Sleeping Bear Dunes National Lakeshore`,
+        body: `This National Lakeshore includes the world’s largest collection of sand dunes along fresh water. They include 450 ft tall sand dunes. The lakeshore consists of 35 miles along Lake Michigan and 
+                some of the prettiest beaches in the Midwest.`               
     },
 ],);
-const headerTwo = ref("Shutter Speed")
+const headerTwo = ref("Other Destinations")
 const gridTwo = ref([
     {
-        class: `col-lg-6`,
-        title: `What is Shutter Speed`,
-        body: `The camera's shutter determines when the camera's senser will be open to 
-        incoming light. So the shutter speed refers to how long the light is allowed to enter
-        thru the camera lense.`
+        class: `col-lg-4`,
+        title: `Lighthouses`,
+        body: `There are over 120 lighthouses across the State of Michigan. There are actually more in Michigan than any other 
+                state. One of the more visited lighthouses is Whitefish Point Lighthouse. It is the oldest operating lighthouse 
+                on Lake Superior. The lighthouse sits on a notorious stretch of shoreline known as “Lake Superior’s Shipwreck Coast”. 
+                Out of the 500 plus known shipwrecks, this stretch is home to at least 200 of them. The most famous of them being the 
+                Edmund Fitzgerald. `
     },
     {
-        class: `col-lg-3 text-center`,
-        title: `Slow Shutter`,
-        body: ` This will create more image blur. This is best used with a tripod to prevent hand shaking from
-        being captured. Great for capturing images of the night sky when more time is needed to capture the light. This
-        is also used for creative touches when photographing moving water like a waterfall to give nice blurred water. 
-        Speeds for these types of images could include 1/30"-20" or sometimes longer.`
+        class: `col-lg-4 text-center`,
+        title: `Tahquamenon Falls`,
+        body: `The Falls consist of the Lower and Upper Falls. The Upper Falls are one of the largest waterfalls east of the Mississippi 
+                River. Its spans 200 ft wide with a nearly 50 ft drop. Tannins released from the cedar and hemlock swamps, located upriver, 
+                give the falls its signature brown color and white foam.`
     },
     {
-        class: `col-lg-3 text-center`,
-        title: `Fast Shutter`,
-        body: `This will create sharper images but also allow less light in.
-        Great for photographing wildlife or even sporting events where the subject is moving at higher speeds.`               
+        class: `col-lg-4 text-center`,
+        title: `Mackinac Island`,
+        body: `An island located in Lake Huron near the Straights of Mackinac. The island is listed as a National Historic Landmark and a majority 
+                of the island is preserved as Mackinac Island State Park. Mackinac Island is well known for its ban on almost all motor vehicles and 
+                as the home of the Grand Hotel. The Grand Hotel is famous for having the world’s largest porch and is a member of the Historic Hotels 
+                of America.`               
     },
 ],);
-const headerThree = ref("ISO")
+const headerThree = ref("Title")
 const gridThree = ref([
     {
         class: `col-sm-6`,
-        title: `What is ISO?`,
-        body: `It determines how sensitive the camera is to the light entering it.`
+        title: `title`,
+        body: `body` 
     },
     {
         class: `col-sm-6`,
-        title: `Why do we care?`,
-        body: `A lower ISO is almost always the preferred way. This is becasuse a higher ISO can increase 
-        the amount of image noise.`
+        title: `title`,
+        body: `body`
     },
 ],);
 </script>

@@ -6,29 +6,54 @@ const name = ref("AccordionPage");
 /* create array of accordian content to call on in template*/
 const accordion = ref([
     {
-        header: `Accordion #1`,
+        header: `Lake Superior`,
         target: `#collapseOne`,
         controls: `collapseOne`,
         id: `collapseOne`,
-        body: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam voluptatem provident tempore ducimus 
-                      quidem facere magnam similique quaerat nihil molestias?`
+        body: `The Ojibwe name is gitchi-gami, which translates to “Great Sea”. Lake Superior is the largest freshwater lake in the world by surface area.  By volume, it is the largest of the Great Lakes. 
+                Facts:
+                Max Depth: 1333 ft
+                Surrounded By: Michigan, Wisconsin, Minnesota, and Ontario`
     },
     {
-        header: `Accordion #2`,
+        header: `Lake Michigan`,
         target: `#collapseTwo`,
         controls: `collapseTwo`,
         id: `collapseTwo`,
-        body: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, quae quis culpa itaque ipsa debitis, 
-                      rerum expedita eaque quas, voluptatem velit quibusdam! Maxime, id libero? Repudiandae minus sequi optio consectetur!`
+        body: `From the Ojibwe name, mishi-gami, which translate to “Great Water”. Lake Michigan is the second-largest lake, out of the Great Lakes, by volume. It is connected to Lake Huron through the Straits of Mackinac. The Shores of Lake Michigan is often referred to as the “Third Coast” following those of the Atlantic and Pacific Oceans.
+                Facts:
+                Max Depth: 925 ft
+                Surrounded By: Michigan, Wisconsin, Illinois, and Indiana`
     },
     {
-        header: `Accordion #3`,
+        header: `Lake Huron`,
         target: `#collapseThree`,
         controls: `collapseThree`,
         id: `collapseThree`,
-        body: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni, minima aspernatur! Tenetur sapiente eos 
-                      incidunt, vel debitis eligendi quam dolor dicta aliquid a ut similique odio esse culpa! Nisi consequuntur 
-                      nihil distinctio fugit, expedita consequatur! Hic asperiores dolor porro quis!`
+        body: `It is connected to Lake Michigan through the Straits of Mackinac. It is the third-largest lake, by volume, of the five Great Lakes. 
+                Facts:
+                Max Depth: 748 ft
+                Surrounded By: Michigan and Ontario`
+    },
+    {
+        header: `Lake Ontario`,
+        target: `#collapseFour`,
+        controls: `collapseFour`,
+        id: `collapseFour`,
+        body: `Lake Ontario is the fourth-largest lake of the five, by volume. It is also the only lake to not border the state of Michigan. This is the last lake in the chain of Great Lakes that leads to the St. Lawerence River, which ends at the Atlantic Ocean.
+                Facts:
+                Max Depth: 804 ft
+                Surrounded By: Ontario and New York`
+    },
+    {
+        header: `Lake Erie`,
+        target: `#collapseFive`,
+        controls: `collapseFive`,
+        id: `collapseFive`,
+        body: `It’s name is derived from the Iroquoian term “erielhonan” which translates to “long tail”Lake Erie is the smallest, by volume, of all the Great Lakes. It flows into Lake Ontario through the Niagara Falls.
+                Facts:
+                Max Depth: 210 ft
+                Surrounded By: Michigan, Ohio, Pennsylvania, New York, and Ontario`
     },
 ],); 
 const show = ref(true)

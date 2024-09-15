@@ -8,38 +8,30 @@ const touchButton = ref(true);
 /* Jumbotron
 created ref variables for this so that in the template section the content could be rendered dynamically
 and be changed easily if the text changed*/
-const jumboTitle = ref(`What is it?`);
-const jumboText = ref(` Photography is producing images by the action of light on a sensitive surface. The greek translation is "draw from light".`);
-const jumboText2 = ref(`Photography is all about capturing the light. To capture a photo, we need to control both 
-the amount of light that is exposed to the surface and control the sensitivity of the surface to that light.
-This is where the Exposure Triangle comes into play, which is comprised of aperture, shutter speed, and ISO.`);       
+const jumboTitle = ref(`Michigan?`);
+const jumboText = ref(` Where's that?`);
+const jumboText2 = ref(`Take out your right hand (palm facing you) and lay it in the center of The Great Lakes`);       
 
 
 /* Cards
 create array of cards objects to call on in the template section*/
 const cards = ref([
                 {
-                    header: `Title 1`,
-                    text: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi, debitis.`,
-                    link: `"#"`,
+                    header: `Pure Michigan`,
+                    text: `The official travel and tourism website for Michigan.`,
+                    link: `https://www.michigan.org/`,
                     button: `Link Button`
                 },
                 {
-                    header: `Title 2`,
-                    text: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi, debitis.`,
-                    link: `"#"`,
+                    header: `Great Lakes Guide`,
+                    text: `Discover more about each of the Great Lakes and their importance below and on the Accordion Page.`,
+                    link: `https://greatlakes.guide/`,
                     button: `Link Button`
                 },
                 {
-                    header: `Title 3`,
-                    text: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi, debitis.`,
-                    link: `"#"`,
-                    button: `Link Button`
-                },
-                {
-                    header: `Title 3`,
-                    text: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi, debitis.`,
-                    link: `"#"`,
+                    header: `National Parks of Michigan`,
+                    text: `All site maintained by the National Parks Service in the State of Michigan.`,
+                    link: `https://www.nps.gov/state/mi/index.htm`,
                     button: `Link Button`
                 },
             ],
