@@ -1,105 +1,124 @@
 <script setup>
-import { ref } from "vue";
 
+import { ref } from "vue";
 const name = ref("ImagesPage");
 
 /* create array of Landscape images to call on in template*/
-const imagesLandscape = ref([
+const images = ref([
     {
-        link: `https://live.staticflickr.com/65535/51537246564_4d6e3ea0fd_b.jpg`,
-        text: `Mountain and waterfall in iceland`
+        src: 'https://live.staticflickr.com/65535/51537246564_4d6e3ea0fd_b.jpg',
+        alt: 'Mountain and waterfall in iceland',
+        title: 'Kirkjufell, Iceland',
+        class: 'img-fluid h-100 p-0 d-block mx-auto'
     },
     {
-        link: `https://live.staticflickr.com/65535/51889963733_163ddcbf60_b.jpg`,
-        text: `mountais and forest reflected in lake`
+        src: 'https://live.staticflickr.com/65535/51889963733_163ddcbf60_b.jpg',
+        alt: 'mountais and forest reflected in lake',
+        title: 'Glacier National Park, Montana USA',
+        class: 'img-fluid h-100 p-0 d-block mx-auto'
     },
     {
-        link: `https://images.pexels.com/photos/1166209/pexels-photo-1166209.jpeg?auto=compress&cs=tinysrgb&w=1200`,
-        text: `lavender fields`
+        src: 'https://images.pexels.com/photos/1166209/pexels-photo-1166209.jpeg',
+        alt: 'lavender fields',
+        title: 'Lavender Field, France',
+        class: 'img-fluid h-100 p-0 d-block mx-auto'
+    },    
+    {
+        src:'https://images.pexels.com/photos/2437296/pexels-photo-2437296.jpeg',
+        alt: 'building on lake infront of mountain',
+        title: 'Lake Misurina, Italy',
+        class: 'img-fluid w-100 p-0 d-block mx-auto'
     },
     {
-        link: `https://images.pexels.com/photos/1933239/pexels-photo-1933239.jpeg?auto=compress&cs=tinysrgb&w=1200`,
-        text: `northern lights over the mountains`
+        src: 'https://images.pexels.com/photos/1955134/pexels-photo-1955134.jpeg',
+        alt: 'a long open road',
+        title: 'Road in Iceland',
+        class: 'img-fluid w-100 p-0 d-block mx-auto'
     },
     {
-        link: `https://images.pexels.com/photos/632522/pexels-photo-632522.jpeg?auto=compress&cs=tinysrgb&w=1200`,
-        text: `cliff side city in italy`
-    },      
-    ],
- );
+        src: 'https://images.pexels.com/photos/3648269/pexels-photo-3648269.jpeg',
+        alt: 'rio from high viewpoint',
+        title: 'Rio de Janeiro, Brazil',
+        class: 'img-fluid w-100 p-0 d-block mx-auto'
+    },
+    {
+        src: 'https://images.pexels.com/photos/1933239/pexels-photo-1933239.jpeg',
+        alt: 'northern lights over the mountains',
+        title: 'Northern Lights, Norway',
+        class: 'img-fluid h-100 p-0 d-block mx-auto'
+    },
+    {
+        src: 'https://images.pexels.com/photos/632522/pexels-photo-632522.jpeg',
+        alt: 'cliff side city in italy',
+        title: 'Camogli, Italy',
+        class: 'img-fluid h-100 p-0 d-block mx-auto'
+    },
+    ],);
 
-/* create array of Portrait images to call on in template*/
- const imagesPortrait = ref([
-    {
-        link:`https://images.pexels.com/photos/2437296/pexels-photo-2437296.jpeg?auto=compress&cs=tinysrgb&w=1200`,
-        text: `building on lake infront of mountain`
-    },
-    {
-        link: `https://images.pexels.com/photos/1955134/pexels-photo-1955134.jpeg?auto=compress&cs=tinysrgb&w=1200`,
-        text: `a long open road`
-    },
-    {
-        link: `https://images.pexels.com/photos/3648269/pexels-photo-3648269.jpeg?auto=compress&cs=tinysrgb&w=1200`,
-        text: `rio from high viewpoint`
-    },
-    ],
- );
 
 /* create array of B/W images to call on in template*/
  const imagesCarousel = ref([
     {
-        class: `carousel-item active`,
-        link: `https://images.pexels.com/photos/1529881/pexels-photo-1529881.jpeg?auto=compress&cs=tinysrgb&w=1200`,
-        text: `forest in black and white`
+        class: 'carousel-item active',
+        src: 'https://images.pexels.com/photos/1529881/pexels-photo-1529881.jpeg',
+        alt: 'forest in black and white',
+        title: 'title'
     },
     {
-        class: `carousel-item`,
-        link: `https://images.pexels.com/photos/763097/pexels-photo-763097.jpeg?auto=compress&cs=tinysrgb&w=1200`,
-        text: `mountains in black and white`
+        class: 'carousel-item',
+        src: 'https://images.pexels.com/photos/763097/pexels-photo-763097.jpeg',
+        alt: 'mountains in black and white',
+        title: 'title'
     },
     {
-        class: `carousel-item`,
-        link: `https://images.pexels.com/photos/276374/pexels-photo-276374.jpeg?auto=compress&cs=tinysrgb&w=1200`,
-        text: `mountains and lake in black and white`
+        class: 'carousel-item',
+        src: 'https://images.pexels.com/photos/276374/pexels-photo-276374.jpeg',
+        alt: 'mountains and lake in black and white',
+        title: 'title'
     },
  ],);
+
+
+//Image Prop Component
+import ImageList from './ImageList.vue'; 
+
+
+
 </script>
 
 
 <template>
    <main>
-        <div class="container mt-5 d-flex flex-wrap gap-2 justify-content-center">
-            <!-- use a v-for with the binding key to loop thru all the objects in the images array
-            use : to bind object in array  to the src and alt text to display images -->
-            <img class="img-fluid w-75 p-2 d-block mx-auto" 
-                 v-for="imageL in imagesLandscape" 
-                 :key="imageL.link"
-                 :src="imageL.link" 
-                 :alt="imageL.text">       
-        </div>
-        <div class="container mt-5 d-flex flex-wrap gap-2 justify-content-center">
-             <!-- use a v-for with the binding key to loop thru all the objects in the images array
-            use : to bind object in array  to the src and alt text to display images -->
-            <img class="img-fluid w-50 object-fit-contain"
-                v-for="imageP in imagesPortrait"
-                :key="imageP.link"
-                :src="imageP.link"
-                :alt="imageP.text">
+        <div class="img-cont container mt-5 d-flex flex-wrap gap-1 justify-content-center">
+        <!-- 
+            Name the props we are passing down to Image List from the specified array
+            use v-for to loop through the array and display each object (dynamic props)
+         -->
+        <ImageList 
+                 v-for="(image, index) in images"
+                 :key='index'
+                 :src='image.src' 
+                 :alt='image.alt'
+                 :title='image.title'
+                 :class='image.class'
+                 :index="index"
+            />
+            
         </div>
         <div id="myFirstCarousel" class="carousel slide container mt-5 mb-5 w-75">
                 <div class="carousel-inner">
                   <!--create image carousel 
                   use v-for to loop thrue imagesCarousel array
-                  use imageC.class to make sure the first image of the array has 'active' while the following images don't-->
-                    <div :class="imageC.class"
-                        v-for="imageC in imagesCarousel"
-                        :key="imageC.link">
-                        
-                        <img  
-                        class="d-block w-100"
-                        :src="imageC.link"
-                        :alt="imageC.text">
-                    </div>
+                  use imageC.class to make sure the first image of the array has 'active' while the following images don't
+                  use ImageList prop to get imagesCarousel properties-->
+                    <img
+                    v-for='imageC in imagesCarousel' 
+                    :key='imageC.src'
+                    :src='imageC.src' 
+                    :alt='imageC.alt'
+                    :title='imageC.title'
+                    :class='imageC.class'
+                    >
                 </div>
                 <!-- use buttons to move thru the image carousel-->
                 <button class="carousel-control-prev" 
@@ -125,7 +144,5 @@ const imagesLandscape = ref([
 </template>
 
 <style scoped>
-h2 {
-    color:green;
-}
+
 </style>
